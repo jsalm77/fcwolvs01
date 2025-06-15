@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>FC Wolves - لوحة المدرب</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>لوحة التحكم - المدرب</h1>
+
+    <section>
+      <h2>➕ إضافة لاعب:</h2>
+      <input type="text" id="playerName" placeholder="اسم اللاعب">
+      <input type="text" id="playerPosition" placeholder="المركز">
+      <button onclick="addPlayer()">إضافة</button>
+      <ul id="playerList"></ul>
+    </section>
+
+    <section>
+      <h2>🧩 تعديل التشكيلة الأساسية:</h2>
+      <textarea id="formationInput" rows="3" placeholder="اكتب التشكيلة الجديدة هنا..."></textarea>
+      <button onclick="saveFormation()">حفظ التشكيلة</button>
+    </section>
+
+    <section>
+      <h2>⚽ حالة اليوم:</h2>
+      <select id="statusSelect">
+        <option value="لا توجد مباراة">لا توجد مباراة</option>
+        <option value="تدريب">تدريب</option>
+        <option value="مباراة">مباراة</option>
+      </select>
+      <button onclick="saveStatus()">حفظ</button>
+    </section>
+
+    <section>
+      <h2>📅 تحديد المباراة القادمة:</h2>
+      <input type="datetime-local" id="nextMatchInput">
+      <button onclick="saveNextMatch()">تحديث</button>
+    </section>
+
+    <section>
+      <h2>📢 إرسال إشعار للاعبين:</h2>
+      <input type="text" id="notificationMsg" placeholder="نص الإشعار">
+      <button onclick="sendNotification()">إرسال</button>
+    </section>
+
+    <section>
+      <h2>📜 سجل النتائج السابقة:</h2>
+      <textarea id="matchHistory" rows="4" placeholder="اكتب النتائج هنا..."></textarea>
+      <button onclick="saveMatchHistory()">حفظ السجل</button>
+    </section>
+
+    <hr>
+    <button onclick="resetData()" style="background:red;color:white;">🗑️ إعادة ضبط البيانات</button>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html> 
